@@ -1,0 +1,31 @@
+This is the CJK (Chinese-Japanese-Korean) package for FIGlet 2.2.
+
+The following fonts are provided:
+
+        gb16fs - Chinese fang song ti font
+                Converted from X font: uses 16 x 16 characters
+                GB2312 encoding
+        gb16st - Chinese song ti font
+                Converted from X font: uses 16 x 16 characters
+                GB2312 encoding
+        jiskan16 - Japanese font
+                Converted from X font: uses 16 x 16 characters
+                JIS 0208X 1983 encoding
+        hanglg16 - Korean Gothic font
+                Converted from X font: uses 16 x 16 characters
+                KSC5601 encoding
+        kanglm16 - Korean Mincho font
+                Converted from X font: uses 16 x 16 characters
+                KSC5601 encoding
+        cns - Traditional Chinese font
+                Converted from X font: uses 40 x 40 characters
+                CNS encoding, with 0x010000 added to plane 1
+                        and 0x020000 added to plane 2 characters
+
+The following controlfiles are provided:
+
+        unshift - maps 94 x 94 font in GR space (0xA1A1 - 0xFEFE) to
+                GL space (0x2121 - 0x7E7E).
+        iso2022 - strips off ISO 2022 character set information
+                from 94 x 94 character sets
+        big5 - maps Taiwan Big-5 character set to CNS

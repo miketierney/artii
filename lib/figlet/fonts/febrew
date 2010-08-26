@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Uses more "sensible" (for English keyboards) key mapping for the
+# Jerusalem figlet font.
+
+tr "abgdhvzctykflmonieypujwqrsx,.;/'" "tcdsvuzjyhflknobixgp;m.era,'/\`qw" | figlet -f jerusalem $*
