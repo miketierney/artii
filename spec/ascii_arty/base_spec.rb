@@ -7,9 +7,17 @@ describe AsciiArty::Base do
       arty.should be_an_instance_of(AsciiArty::Base)
     end
 
-    it "should have an output" do
-      arty = AsciiArty::Base.new 'hello world'
-      arty.output.should == 'hello world'
+    it "should have an empty output" do
+      arty = AsciiArty::Base.new
+      arty.output.should be_empty
+    end
+  end
+
+  describe "#asciify" do
+    it "should produce an output" do
+      arty = AsciiArty::Base.new
+      arty.asciify 'hello world'
+      arty.output.should_not be_empty
     end
   end
 end

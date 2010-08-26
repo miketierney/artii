@@ -26,11 +26,13 @@ module AsciiArty
       #   end
       # end.parse!(args)
 
-      self.output = args.first
+      @output = ''
+      @font = AsciiArty::Figlet::Font.new("#{FONTPATH}/big.flf")
     end
 
-    def out(string)
-      string
+    def asciify(string)
+      figlet = AsciiArty::Figlet::Typesetter.new(@font)
+      @output = figlet[string]
     end
   end
 end

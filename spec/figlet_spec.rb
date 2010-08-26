@@ -3,12 +3,6 @@ $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 
 require 'ascii_arty'
 
-class File
-  def self.rel(*path)
-    join(dirname(__FILE__), *path)
-  end
-end
-
 describe AsciiArty::Figlet do
   it "should return hello world" do
     font = AsciiArty::Figlet::Font.new(File.rel('data', 'big.flf'))

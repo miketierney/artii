@@ -5,6 +5,8 @@ $: << File.dirname(__FILE__)
 require 'ascii_arty/base'
 
 module AsciiArty
+  FONTPATH = File.expand_path(File.dirname(__FILE__) + '/../lib/figlet/fonts')
+
   def self.is_19?
     RUBY_VERSION[0, 3] == "1.9"
   end
