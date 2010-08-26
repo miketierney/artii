@@ -40,6 +40,10 @@ None (yet)
 
 == TODO
 
+- Need an actual executable file
+- Need to accept user input from the command line
+- Need to return formatted text
+- Basically ... it just needs to work (doesn't, currently. It's still VERY alpha)
 - Accept --font switch
 - Ability to set custom configurations, so you don't have to constantly set the options (like font) unless you want to
 
