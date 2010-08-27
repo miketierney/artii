@@ -1,10 +1,10 @@
-module AsciiArty
+module Artii
 module Figlet
 
   class Smusher
 
     def initialize(font)
-      AsciiArty.raise_19_incompat
+      Artii.raise_19_incompat
       @font = font
     end
 
@@ -62,4 +62,4 @@ module Figlet
   end
 
 end # module Figlet
-end # module AsciiArty
+end # module Artii

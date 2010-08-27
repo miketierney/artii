@@ -1,4 +1,4 @@
-module AsciiArty
+module Artii
 module Figlet
 
   class UnknownFontFormat < StandardError
@@ -6,7 +6,7 @@ module Figlet
 
   class Font
     def initialize(filename, load_german = true)
-      AsciiArty.raise_19_incompat
+      Artii.raise_19_incompat
 
       file = File.open(filename, 'rb')
 
@@ -116,4 +116,4 @@ module Figlet
   end
 
 end # module Figlet
-end # module AsciiArty
+end # module Artii

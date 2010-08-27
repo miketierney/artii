@@ -12,7 +12,7 @@ ASCII Arty is a little ASCII art generator that uses the Figlet library. Just fe
 
 == Examples
   # Basic usage
-  $ ascii_arty 'Art!'
+  $ artii 'Art!'
   # =>                 _   _ 
   # =>      /\        | | | |
   # =>     /  \   _ __| |_| |
@@ -22,7 +22,7 @@ ASCII Arty is a little ASCII art generator that uses the Figlet library. Just fe
   # =>                       
 
   # To use a different font
-  $ ascii_arty 'Art!' --font slant
+  $ artii 'Art!' --font slant
   # =>      ___         __  __
   # =>     /   |  _____/ /_/ /
   # =>    / /| | / ___/ __/ / 
@@ -36,7 +36,7 @@ None (yet)
 
 == Install
 
-- (sudo) gem install ascii_arty
+- (sudo) gem install artii
 
 == TODO
 

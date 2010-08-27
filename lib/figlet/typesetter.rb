@@ -1,10 +1,10 @@
-module AsciiArty
+module Artii
 module Figlet
 
   class Typesetter
 
     def initialize(font, options = nil)
-      AsciiArty.raise_19_incompat
+      Artii.raise_19_incompat
       @font = font
       @options = options || {}
       @smush = @options.has_key?(:smush) ? @options[:smush] : true
@@ -66,4 +66,4 @@ module Figlet
   end
 
 end # module Figlet
-end # module AsciiArty
+end # module Artii
