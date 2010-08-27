@@ -8,9 +8,9 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "artii"
-    # gem.executables = ["artii"]
-    gem.summary = "A little Figlet-based ASCII art generator"
-    gem.description = "A little Figlet-based ASCII art generator"
+    gem.executables = ["artii"]
+    gem.summary = "A little Figlet-based ASCII art generator."
+    gem.description = "A Figlet-based ASCII art generator, useful for command-line based ASCII Art Generation."
     gem.email = "mike@panpainter.com"
     gem.homepage = "http://github.com/panpainter/artii"
     gem.authors = ["Mike Tierney"]
