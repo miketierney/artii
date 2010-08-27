@@ -41,11 +41,13 @@ None (yet)
 == TODO
 
 - Need an actual executable file
-- Need to accept user input from the command line
-- Need to return formatted text
-- Basically ... it just needs to work (doesn't, currently. It's still VERY alpha)
-- Accept --font switch
 - Ability to set custom configurations, so you don't have to constantly set the options (like font) unless you want to
+- Some nice built-in utilities (to make for easier demoing)
+- Font list should be stored as a hash, and not a string
+- Font list should show samples of the faces in addition to the names
+- Font list should be able to show a given range (fonts starting with specific letters, or a range of letters)
+- Font list should be searchable (a la grep)
+- Font list needs to be generated from a) included fonts and b) a user-specified location (see To Do about custom configurations)
 
 = Note on Figlet
 

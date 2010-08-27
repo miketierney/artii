@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'lib/ascii_arty'
+
+begin
+  a = AsciiArty::Base.new *ARGV.dup
+  puts a.output
+rescue StandardError => e
+  puts "Something has gone horribly wrong!"
+  puts "Marvin says: #{e.message}"
+  # puts e.backtrace
+end
