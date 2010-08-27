@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-require 'rubygems'
-require 'lib/artii'
+
+require File.expand_path(File.dirname(__FILE__) + "/../lib/artii")
 
 begin
   a = Artii::Base.new *ARGV.dup

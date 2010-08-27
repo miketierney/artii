@@ -10,10 +10,10 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Tierney"]
   s.date = %q{2010-08-27}
-  s.default_executable = %q{ascii_arty}
+  s.default_executable = %q{artii}
   s.description = %q{A little Figlet-based ASCII art generator}
   s.email = %q{mike@panpainter.com}
-  s.executables = ["ascii_arty"]
+  s.executables = ["artii"]
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
@@ -23,7 +23,10 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
-     "bin/ascii_arty",
+     "artii.gemspec",
+     "lib/artii.rb",
+     "lib/artii/base.rb",
+     "lib/artii/figlet.rb",
      "lib/figlet/font.rb",
      "lib/figlet/fonts/3-d.flf",
      "lib/figlet/fonts/3x5.flf",
@@ -691,6 +694,8 @@ Gem::Specification.new do |s|
      "lib/figlet/fonts/whimsy.flf",
      "lib/figlet/smusher.rb",
      "lib/figlet/typesetter.rb",
+     "spec/artii/base_spec.rb",
+     "spec/artii_spec.rb",
      "spec/data/big.flf",
      "spec/data/big.txt",
      "spec/data/chunky.flf",
