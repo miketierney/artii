@@ -4,3 +4,11 @@
 
   * Birthday!
 
+=== 0.0.1 / 2010-08-27
+
+* Lots of major enhancements
+
+  * First functional release
+  * Figlet integration
+  * Able to accept user input and return generated ASCII art
+  * Accept flags for different fonts (currently only have three exposed: 'big', 'slant', and 'chunky')
