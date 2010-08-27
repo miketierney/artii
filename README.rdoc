@@ -40,7 +40,7 @@ None (yet)
 
 == TODO
 
-- Need an actual executable file
+- Ability to load non *.flf files (fonts are available, but the script assumes a .flf extension)
 - Ability to set custom configurations, so you don't have to constantly set the options (like font) unless you want to
 - Some nice built-in utilities (to make for easier demoing)
 - Font list should be stored as a hash, and not a string
