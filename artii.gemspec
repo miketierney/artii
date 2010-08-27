@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{artii}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Tierney"]
   s.date = %q{2010-08-27}
   s.default_executable = %q{artii}
-  s.description = %q{A little Figlet-based ASCII art generator}
+  s.description = %q{A Figlet-based ASCII art generator, useful for command-line based ASCII Art Generation.}
   s.email = %q{mike@panpainter.com}
   s.executables = ["artii"]
   s.extra_rdoc_files = [
@@ -708,7 +708,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.6}
-  s.summary = %q{A little Figlet-based ASCII art generator}
+  s.summary = %q{A little Figlet-based ASCII art generator.}
   s.test_files = [
     "spec/artii/base_spec.rb",
      "spec/artii_spec.rb",
