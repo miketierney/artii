@@ -20,3 +20,7 @@
   * Renamed binary file: ascii_arty => artii
   * Temporarily removed the fuzzy.flf file to prevent installation errors
   * Misc. other bug fixes
+
+=== 0.0.3 / 2010-08-27
+
+* No functional changes.  
