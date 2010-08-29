@@ -30,3 +30,7 @@
 * Available Fonts are generated from the included font files
 * Available Fonts are stored as a hash, and now fully listed when called with -l or --list
 * A few other minor tweaks
+
+=== 1.0.1 / 2010-08-18
+
+* No functional changes.
