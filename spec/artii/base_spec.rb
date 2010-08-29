@@ -9,37 +9,43 @@ describe Artii::Base do
     end
   end
 
-    it "should default to 'big'" do
+    it "font_name should default to 'big.flf'" do
       a = Artii::Base.new 'test'
-      a.font_name.should == 'big'
+      a.font_name.should == 'big.flf'
     end
 
   describe "font switching" do
     context 'should set font if passed -f ' do
-      before do
-        @a = Artii::Base.new 'test', '-f', 'chunky'
+      it "should set @font_name" do
+        a = Artii::Base.new 'test', '-f', 'chunky'
+        a.instance_variable_get(:@font_name).should == 'chunky.flf'
       end
 
-      it "set @options[:font]" do
-        @a.instance_variable_get(:@options)[:font].should == 'chunky'
+      xit "should accept non-flf file formats" do
+        a = Artii::Base.new 'test', '-f', 'frango'
+        a.font_name.should == 'frango.flc'
       end
 
-      it "should have @options[:font] and @font_name be the same" do
-        @a.font_name.should == @a.instance_variable_get(:@options)[:font]
+      it "should accept fonts in nested directories" do
+        a = Artii::Base.new 'test', '-f', 'cour'
+        a.font_name.should == 'bdffonts/cour.flf'
       end
     end
 
     context 'should set font if passed --font' do
-      before do
-        @a = Artii::Base.new 'test', '--font', 'chunky'
+      it "set @font_name" do
+        a = Artii::Base.new 'test', '--font', 'chunky'
+        a.instance_variable_get(:@font_name).should == 'chunky.flf'
       end
 
-      it "set @options[:font]" do
-        @a.instance_variable_get(:@options)[:font].should == 'chunky'
+      it "should accept fonts in nested directories" do
+        a = Artii::Base.new 'test', '--f', 'cour'
+        a.font_name.should == 'bdffonts/cour.flf'
       end
 
-      it "should have @options[:font] and @font_name be the same" do
-        @a.font_name.should == @a.instance_variable_get(:@options)[:font]
+      xit "should accept non-flf file formats" do
+        a = Artii::Base.new 'test', '--font', 'frango'
+        a.font_name.should == 'frango.flc'
       end
     end
   end
@@ -49,18 +55,19 @@ describe Artii::Base do
     it "should list all fonts if passed -l" do
       a = Artii::Base.new '-l'
       a.output.should_not be_empty
-      a.output.should include 'Big'
-      a.output.should include 'Chunky'
-      a.output.should include 'Slant'
-      
+      a.output.should include 'big'
+      a.output.should include 'chunky'
+      a.output.should include 'slant'
+      a.output.should include 'helv'
     end
 
     it "should list all fonts if passed --list" do
       a = Artii::Base.new '--list'
       a.output.should_not be_empty
-      a.output.should include 'Big'
-      a.output.should include 'Chunky'
-      a.output.should include 'Slant'
+      a.output.should include 'big'
+      a.output.should include 'chunky'
+      a.output.should include 'slant'
+      a.output.should include 'helv'
     end
   end
 

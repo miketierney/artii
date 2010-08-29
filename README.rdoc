@@ -40,16 +40,17 @@ None (yet)
 
 == TODO
 
-- Ability to load non *.flf files (fonts are available, but the script assumes a .flf extension)
+- Ability to load non *.flf files (fonts are available, .flc file-types seem to be an issue right now)
 - Ability to set custom configurations, so you don't have to constantly set the options (like font) unless you want to
 - Some nice built-in utilities (to make for easier demoing)
-- Font list should be stored as a hash, and not a string
 - Font list should show samples of the faces in addition to the names
 - Font list should be able to show a given range (fonts starting with specific letters, or a range of letters)
 - Font list should be searchable (a la grep)
-- Font list needs to be generated from a) included fonts and b) a user-specified location (see To Do about custom configurations)
+- Font list needs to be generated from <strike>a) included fonts</strike> and b) a user-specified location (see To Do about custom configurations)
 
-= Note on Figlet
+= Prior Art
+
+== Figlet
 
 Figlet (http://www.figlet.org) implementation written by Tim Fletcher
 (twoggle@gmail.com). Found originally in the text gem
