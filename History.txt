@@ -23,4 +23,10 @@
 
 === 0.0.3 / 2010-08-27
 
-* No functional changes.  
+* No functional changes.
+
+=== 1.0.0 / 2010-08-28
+
+* Available Fonts are generated from the included font files
+* Available Fonts are stored as a hash, and now fully listed when called with -l or --list
+* A few other minor tweaks
