@@ -12,7 +12,7 @@ begin
     gem.summary = "A little Figlet-based ASCII art generator."
     gem.description = "A Figlet-based ASCII art generator, useful for command-line based ASCII Art Generation."
     gem.email = "mike@panpainter.com"
-    gem.homepage = "http://github.com/panpainter/artii"
+    gem.homepage = "http://github.com/miketierney/artii"
     gem.authors = ["Mike Tierney"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
