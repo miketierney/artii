@@ -1,5 +1,8 @@
 require 'find'
 require 'optparse'
+require 'figlet/font'
+require 'figlet/smusher'
+require 'figlet/typesetter'
 
 module Artii
   class Base

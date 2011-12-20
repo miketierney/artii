@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require File.expand_path(File.dirname(__FILE__) + "/../lib/artii")
+require 'artii'
 
 begin
   a = Artii::Base.new *ARGV.dup

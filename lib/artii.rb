@@ -13,9 +13,6 @@
 # License::   Distributed under the MIT License
 
 require 'rubygems'
-
-$: << File.dirname(__FILE__)
-
 require 'artii/base'
 
 module Artii
@@ -27,19 +24,12 @@ module Artii
 
   def self.encoding_of(string)
     if is_19?
-      string.encoding.to_s 
-    else 
+      string.encoding.to_s
+    else
       $KCODE
     end
   end
 
-  def self.raise_19_incompat
-    if is_19?
-      raise "Artii::Figlet is not compatible with Ruby 1.9 at this time"
-    end
-  end
 end
 
-if !Artii.is_19?
-  require 'artii/figlet'
-end
+require 'artii/figlet'
