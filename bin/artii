@@ -8,5 +8,5 @@ begin
 rescue StandardError => e
   puts "Something has gone horribly wrong!"
   puts "Artii says: #{e.message}"
-  puts e.backtrace
+  # puts e.backtrace
 end

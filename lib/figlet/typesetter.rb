@@ -13,7 +13,7 @@ module Artii
         result = []
         str.length.times do |i|
           char = str[i]
-          unless @font.has_char?(char)
+          unless @font.has_char?(char.ord)
             if @font.has_char?(0)
               char = 0
             else
@@ -21,7 +21,7 @@ module Artii
             end
           end
           @font.height.times do |j|
-            line = @font[char][j]
+            line = @font[char.ord][j]
             if result[j].nil?
               result[j] = line
             else
