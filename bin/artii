@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require File.expand_path(File.dirname(__FILE__) + "/../lib/artii")
+require 'artii'
 
 begin
   a = Artii::Base.new *ARGV.dup
@@ -8,5 +8,5 @@ begin
 rescue StandardError => e
   puts "Something has gone horribly wrong!"
   puts "Artii says: #{e.message}"
-  # puts e.backtrace
+  puts e.backtrace
 end
