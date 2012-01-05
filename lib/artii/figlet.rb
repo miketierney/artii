@@ -6,9 +6,9 @@
 # Usage:
 #
 #   big_font = Artii::Figlet::Font.new('big.flf')
-#   
+#
 #   figlet = Artii::Figlet::Typesetter.new(big_font)
-#   
+#
 #   puts figlet['hello world']
 #
 #
