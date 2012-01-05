@@ -1,40 +1,43 @@
 # -*- ruby -*-
+# encoding: utf-8
 
 require 'rubygems'
-require 'rake'
-require './lib/artii.rb'
+require 'bundler'
 
 begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |gem|
-    gem.name = "artii"
-    gem.executables = ["artii"]
-    gem.summary = "A little Figlet-based ASCII art generator."
-    gem.description = "A Figlet-based ASCII art generator, useful for command-line based ASCII Art Generation."
-    gem.email = "mike@panpainter.com"
-    gem.homepage = "http://github.com/miketierney/artii"
-    gem.authors = ["Mike Tierney"]
-    gem.add_development_dependency "rspec", ">= 1.2.9"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
-  end
-  Jeweler::GemcutterTasks.new
-rescue LoadError
-  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
+  Bundler.setup(:default, :development)
+rescue Bundler::BundlerError => e
+  $stderr.puts e.message
+  $stderr.puts "Run `bundle install` to install missing gems"
+  exit e.status_code
+end
+require 'rake'
+
+require 'jeweler'
+Jeweler::Tasks.new do |gem|
+  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
+  gem.name = "artii"
+  gem.executables = ["artii"]
+  gem.summary = "A little Figlet-based ASCII art generator."
+  gem.description = "A Figlet-based ASCII art generator, useful for comand-line based ASCII Art Generation."
+  gem.email = "mike@panpainter.com"
+  gem.homepage = "http://github.com/miketierney/artii"
+  gem.authors = ["Mike Tierney"]
+  gem.license = "MIT"
+  # dependencies defined in Gemfile
+end
+Jeweler::RubygemsDotOrgTasks.new
+
+require 'rspec/core'
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec) do |spec|
+  spec.pattern = FileList["spec/**/*_spec.rb"]
 end
 
-require 'spec/rake/spectask'
-Spec::Rake::SpecTask.new(:spec) do |spec|
-  spec.libs << 'lib' << 'spec'
-  spec.spec_files = FileList['spec/**/*_spec.rb']
-end
-
-Spec::Rake::SpecTask.new(:rcov) do |spec|
-  spec.libs << 'lib' << 'spec'
-  spec.pattern = 'spec/**/*_spec.rb'
+RSpec::Core::RakeTask.new(:rcov) do |spec|
+  spec.pattern = "spec/**/*_spec.rb"
   spec.rcov = true
 end
-
-task :spec => :check_dependencies
 
 task :default => :spec
 
