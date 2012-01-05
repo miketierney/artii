@@ -4,20 +4,23 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{artii}
-  s.version = "1.0.2"
+  s.name = "artii"
+  s.version = "1.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Tierney"]
-  s.date = %q{2011-03-02}
-  s.default_executable = %q{artii}
-  s.description = %q{A Figlet-based ASCII art generator, useful for command-line based ASCII Art Generation.}
-  s.email = %q{mike@panpainter.com}
+  s.date = "2012-01-05"
+  s.description = "A Figlet-based ASCII art generator, useful for comand-line based ASCII Art Generation."
+  s.email = "mike@panpainter.com"
   s.executables = ["artii"]
   s.extra_rdoc_files = [
     "README.rdoc"
   ]
   s.files = [
+    ".rspec",
+    ".rvmrc",
+    "Gemfile",
+    "Gemfile.lock",
     "History.txt",
     "README.rdoc",
     "Rakefile",
@@ -703,28 +706,31 @@ Gem::Specification.new do |s|
     "spec/spec.opts",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/miketierney/artii}
+  s.homepage = "http://github.com/miketierney/artii"
+  s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
-  s.summary = %q{A little Figlet-based ASCII art generator.}
-  s.test_files = [
-    "spec/artii/base_spec.rb",
-    "spec/artii_spec.rb",
-    "spec/figlet_spec.rb",
-    "spec/spec_helper.rb"
-  ]
+  s.rubygems_version = "1.8.10"
+  s.summary = "A little Figlet-based ASCII art generator."
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
+      s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
+      s.add_development_dependency(%q<rcov>, [">= 0"])
     else
-      s.add_dependency(%q<rspec>, [">= 1.2.9"])
+      s.add_dependency(%q<rspec>, ["~> 2.3.0"])
+      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
+      s.add_dependency(%q<rcov>, [">= 0"])
     end
   else
-    s.add_dependency(%q<rspec>, [">= 1.2.9"])
+    s.add_dependency(%q<rspec>, ["~> 2.3.0"])
+    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+    s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
+    s.add_dependency(%q<rcov>, [">= 0"])
   end
 end
 
