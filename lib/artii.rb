@@ -12,8 +12,8 @@
 # Copyright:: Copyright (c) 2010 Michael Tierney
 # License::   Distributed under the MIT License
 
-require 'rubygems'
 require 'artii/base'
+require 'artii/figlet'
 
 module Artii
   FONTPATH = File.expand_path(File.dirname(__FILE__) + '/../lib/figlet/fonts')
@@ -31,5 +31,3 @@ module Artii
   end
 
 end
-
-require 'artii/figlet'
