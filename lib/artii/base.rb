@@ -1,5 +1,4 @@
 require 'find'
-require 'optparse'
 require 'figlet/font'
 require 'figlet/smusher'
 require 'figlet/typesetter'
@@ -7,50 +6,36 @@ require 'figlet/typesetter'
 module Artii
   class Base
 
-    attr_accessor :output, :font, :font_name, :faces
+    attr_accessor :font, :faces
 
-    def initialize(*args)
-      @options = {}
-      @output = ''
-      @faces = all_fonts
-
-      OptionParser.new do |opts|
-        opts.banner = "Usage: artii 'your string here' [-f FONT_NAME or --font FONT_NAME] [-l or --list]"
-
-        opts.on('-f', '--font FONT_NAME', 'Specify the font to be used (defaults to "big")') do |font|
-          @font_name = @faces[font]
-        end
-
-        opts.on('-l', '--list', 'Prints the list of available fonts') do |list|
-          @options[:list] = list_all_fonts
-        end
-
-        opts.on_tail("-h", "--help", "Show this message") do
-          puts opts
-          exit
-        end
-
-        if args.empty?
-          puts opts
-          exit
-        end
-      end.parse!(args)
-
-      if @options[:list]
-        @output = list_all_fonts
+    def initialize(params={})
+      if params.is_a?(String)
+        params = {
+          :text => params
+        }
       end
 
-      @font_name = @font_name.nil? ? @faces['big'] : @font_name
+      @options = {
+        :font => "big"
+      }.merge(params)
 
-      @font = Artii::Figlet::Font.new("#{FONTPATH}/#{@font_name}")
+      @faces = all_fonts
+      @font = Artii::Figlet::Font.new font_file(@options[:font])
+    end
 
-      asciify args.first unless args.empty?
+    def font_name
+      @faces[@options[:font]]
+    end
+
+    def font_file(name)
+      "#{FONTPATH}/#{@faces[name]}"
     end
 
     def asciify(string)
       figlet = Artii::Figlet::Typesetter.new(@font)
-      @output = figlet[string]
+      figlet[string]
     end
+    alias :output :asciify
 
     def list_all_fonts
       font_list = "\n--------------------\nAll Available Fonts:\n--------------------\n\n"
