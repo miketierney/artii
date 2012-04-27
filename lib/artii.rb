@@ -12,6 +12,7 @@
 # Copyright:: Copyright (c) 2010 Michael Tierney
 # License::   Distributed under the MIT License
 
+require 'artii/cli'
 require 'artii/base'
 require 'artii/figlet'
 
