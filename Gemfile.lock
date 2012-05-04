@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    artii (1.0.3)
+    artii (2.0.0)
+      artii
 
 GEM
   remote: http://rubygems.org/
