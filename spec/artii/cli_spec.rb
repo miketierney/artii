@@ -16,9 +16,9 @@ describe Artii::CLI do
 
   describe "font switching" do
     context 'should set font if passed -f ' do
-      it "should set @font_name" do
+      it "should set @a.font_name" do
         a = Artii::CLI.new 'test', '-f', 'chunky'
-        a.instance_variable_get(:@font_name).should == 'chunky.flf'
+        a.instance_variable_get(:@a).font_name.should == 'chunky.flf'
       end
 
       xit "should accept non-flf file formats" do
@@ -33,9 +33,9 @@ describe Artii::CLI do
     end
 
     context 'should set font if passed --font' do
-      it "set @font_name" do
+      it "set @a.font_name" do
         a = Artii::CLI.new 'test', '--font', 'chunky'
-        a.instance_variable_get(:@font_name).should == 'chunky.flf'
+        a.instance_variable_get(:@a).font_name.should == 'chunky.flf'
       end
 
       it "should accept fonts in nested directories" do
