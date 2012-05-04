@@ -11,7 +11,7 @@ ASCII Arty is a little ASCII art generator that uses the Figlet library. Just fe
 - Figlet font library
 
 == Examples
-  # Basic usage
+  # Basic usage (cli)
   $ artii 'Art!'
   # =>                 _   _ 
   # =>      /\        | | | |
@@ -30,9 +30,20 @@ ASCII Arty is a little ASCII art generator that uses the Figlet library. Just fe
   # =>  /_/  |_/_/   \__(_)   
   # =>                        
 
+  # Integrated usage
+  a = Artii::Base.new :font => 'slant'
+  a.asciify('Art!')
+  # =>      ___         __  __
+  # =>     /   |  _____/ /_/ /
+  # =>    / /| | / ___/ __/ / 
+  # =>   / ___ |/ /  / /_/_/  
+  # =>  /_/  |_/_/   \__(_)   
+  # =>                        
+
+
 == Requirements
 
-None (yet)
+None
 
 == Install
 
@@ -40,6 +51,7 @@ None (yet)
 
 == TODO
 
+- Allow integrated objects to accept a print out a pre-defined text value
 - Ability to load non *.flf files (fonts are available, .flc file-types seem to be an issue right now)
 - Ability to set custom configurations, so you don't have to constantly set the options (like font) unless you want to
 - Some nice built-in utilities (to make for easier demoing)
@@ -58,7 +70,7 @@ Figlet (http://www.figlet.org) implementation written by Tim Fletcher
 its removal.
 
 == Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
