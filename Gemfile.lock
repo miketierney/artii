@@ -28,7 +28,7 @@ PLATFORMS
 
 DEPENDENCIES
   artii!
-  bundler (~> 1.0.0)
+  bundler (~> 1.1.0)
   jeweler (~> 1.6.4)
   rcov
   rspec (~> 2.3.0)
