@@ -51,6 +51,7 @@ None
 
 == TODO
 
+- CLI should support "-v" or "--version" (or both) option to print out currently active Artii version
 - Allow integrated objects to accept a print out a pre-defined text value
 - Ability to load non *.flf files (fonts are available, .flc file-types seem to be an issue right now)
 - Ability to set custom configurations, so you don't have to constantly set the options (like font) unless you want to
