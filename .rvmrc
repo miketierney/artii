@@ -1,1 +1,1 @@
-rvm --create ruby-1.9.2@artii
+rvm --create ruby-1.9.3@artii
