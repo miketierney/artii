@@ -19,6 +19,10 @@ module Artii
           @action = :list_all_fonts
         end
 
+        opts.on('-v', '--version', 'Displays current version number') do |version|
+          @action = :version
+        end
+
         opts.on_tail("-h", "--help", "Show this message") do
           puts opts
           exit

@@ -71,6 +71,20 @@ describe Artii::CLI do
     end
   end
 
+  describe "version" do
+    it "should output the version" do
+      gemspec = Gem::Specification::load 'artii.gemspec'
+      version = gemspec.version.to_s
+
+      a1 = Artii::CLI.new '-v'
+      a1.output.should_not be_empty
+      a1.output.should == version
+
+      a2 = Artii::CLI.new '--version'
+      a2.output.should_not be_empty
+      a2.output.should == version
+    end
+  end
   describe "#asciify" do
     it "should produce an output" do
       a = Artii::CLI.new 'hello world'

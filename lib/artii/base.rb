@@ -69,5 +69,9 @@ module Artii
 
       font_faces
     end
+
+    def version
+      Gem::Specification::load('artii.gemspec').version.to_s
+    end
   end
 end
