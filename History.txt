@@ -42,3 +42,47 @@
 === 1.0.3 / 2012-01-04
 
 * Updates for Ruby 1.9 compatibility.
+
+  * Regenerate gemspec for version 1.0.3 (Mike Tierney)
+  * Version bump to 1.0.3 (Mike Tierney)
+  * Update the history file. (Mike Tierney)
+  * Code cleanup. (Mike Tierney)
+  * Update the Rakefile, add Gemfiles and .rvmrc, .rspec (Mike Tierney)
+  * Merge pull request #1 from haus/update_for_ruby19_compat (Mike Tierney)
+
+=== 2.0.0 / 2012-05-04
+  * Split the CLI code and the core code in to separate locations, making integrating artii in to applications much easier (thanks Colin Mitchell <@muffinista>)
+
+    * Update README TODO list. (Mike Tierney)
+    * Version 2.0.0 Gemfile bump. (Mike Tierney)
+    * Regenerate gemspec for version 2.0.0 (Mike Tierney)
+    * Version bump to 2.0.0 (Mike Tierney)
+    * Update README to reflect new changes. (Mike Tierney)
+    * Fix failing CLI specs. (Mike Tierney)
+    * Fix CLI specs to load the CLI class. (Mike Tierney)
+    * Upgrade the Bundler requirement. (Mike Tierney)
+    * Merge pull request #2 from muffinista/master (Mike Tierney)
+    * split Base into CLI and Base so that Artii can be used outside of the command-line script (Colin Mitchell)
+    * split Base into CLI and Base so that Artii can be used outside of the command-line script (Colin Mitchell)
+    * split Base into CLI and Base so that Artii can be used outside of the command-line app (Colin Mitchell)
+
+=== 2.0.1 / 2012-05-05
+  * Bug fixes
+
+    * Regenerate gemspec for version 2.0.1 (Mike Tierney)
+    * Version bump to 2.0.1 (Mike Tierney)
+    * Don't require artii to install artii. Fix #3. (Mike Tierney)
+
+=== 2.0.2 / 2012-09-05
+
+  * Update dependencies
+
+    * Update gem dependencies, bump patch version. (Mike Tierney)
+    * Version bump to 2.0.2 (Mike Tierney)
+
+=== 2.0.3 / 2012-09-05
+
+  * Add '-v' CLI option to print out the current Gem version
+
+    * Add CLI support for `-v` and `--version` flags. (Mike Tierney)
+    * Lots of updates to the History.txt file (Mike Tierney)
