@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "artii"
-  s.version = "2.0.3"
+  s.version = "2.0.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Tierney"]
-  s.date = "2012-09-05"
+  s.date = "2013-11-26"
   s.description = "A Figlet-based ASCII art generator, useful for comand-line based ASCII Art Generation."
   s.email = "mike@panpainter.com"
   s.executables = ["artii"]
@@ -711,7 +711,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/miketierney/artii"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.24"
+  s.rubygems_version = "1.8.23"
   s.summary = "A little Figlet-based ASCII art generator."
 
   if s.respond_to? :specification_version then
