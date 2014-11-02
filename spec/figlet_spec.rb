@@ -10,6 +10,12 @@ describe Artii::Figlet do
     File.read(File.rel('data', 'big.txt')).should == figlet['Hello World']
   end
 
+  it "should return 123" do
+    font = Artii::Figlet::Font.new(File.rel('data', 'big.flf'))
+    figlet = Artii::Figlet::Typesetter.new(font)
+    File.read(File.rel('data', '123.txt')).should == figlet[123]
+  end
+
   it "should not smush" do
     font = Artii::Figlet::Font.new(File.rel('data', 'chunky.flf'))
     figlet = Artii::Figlet::Typesetter.new(font, :smush => false)
