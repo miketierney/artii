@@ -6,14 +6,14 @@ require 'artii'
 describe Artii do
   describe "FONTPATH" do
     it "should be set" do
-      Artii::FONTPATH.should_not be_empty
+      expect(Artii::FONTPATH).not_to be_empty
     end
 
     it "should include the lib/fonts directory" do
       dirs = Artii::FONTPATH.split('/')
-      dirs.include?('artii').should be_true
-      dirs.include?('lib').should be_true
-      dirs.include?('fonts').should be_true
+      expect(dirs.include?('artii')).to eq(true)
+      expect(dirs.include?('lib')).to eq(true)
+      expect(dirs.include?('fonts')).to eq(true)
     end
   end
 end
