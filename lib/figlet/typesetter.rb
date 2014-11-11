@@ -9,8 +9,9 @@ module Artii
         @smush = @options.has_key?(:smush) ? @options[:smush] : true
       end
 
-      def [](str)
+      def [](obj)
         result = []
+        str = obj.to_s
         str.length.times do |i|
           char = str[i]
           unless @font.has_char?(char.ord)
