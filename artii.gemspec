@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Mike Tierney"]
-  s.date = "2014-11-11"
+  s.date = "2015-01-13"
   s.description = "A Figlet-based ASCII art generator, useful for comand-line based ASCII Art Generation."
   s.email = "mike@panpainter.com"
   s.executables = ["artii"]
