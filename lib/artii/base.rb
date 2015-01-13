@@ -71,7 +71,11 @@ module Artii
     end
 
     def version
-      Gem::Specification::load('artii.gemspec').version.to_s
+      file = 'artii.gemspec'
+      unless File.exists? file
+        file = `gem which artii`.sub("/lib/artii.rb\n", "/#{file}")
+      end
+      Gem::Specification::load(file).version.to_s
     end
   end
 end
