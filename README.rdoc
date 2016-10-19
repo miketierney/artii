@@ -83,7 +83,7 @@ its removal.
 
 (The MIT License)
 
-Copyright (c) 2015 Michael Tierney
+Copyright (c) 2016 Michael Tierney
 
 http://miketierney.com
 
