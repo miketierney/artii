@@ -72,7 +72,7 @@ module Artii
       def load_extended_characters(file)
         until file.eof?
           i = file.gets.strip.split(/ /).first
-          if i && i.empty?
+          if !i || i.empty?
             next
           elsif /^\-0x/i =~ i # comment
             skip_char file
