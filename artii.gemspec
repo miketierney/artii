@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".rspec",
+    ".ruby-version",
     ".rvmrc",
     "Gemfile",
     "Gemfile.lock",
